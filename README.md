@@ -31,7 +31,7 @@ Some good reads about the monorepo approach:
 
 ## Tools
 
-*None*
+See [tools/README.md](tools/README.md).
 
 ## Usage
 
