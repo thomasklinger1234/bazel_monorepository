@@ -17,3 +17,7 @@
   - [x] [Buildifier](https://github.com/bazelbuild/buildtools/tree/master/buildifier)
   - [x] [Buildozer](https://github.com/bazelbuild/buildtools/tree/master/buildozer)
   - [x] [Shfmt](https://github.com/mvdan/sh)
+- [ ] Improve bazel setup
+  - [ ] Use binary bazel to prevent constant re-install and enable caching
+  - [ ] Maybe use [bazelisk](https://github.com/bazelbuild/bazelisk)
+  - [ ] Read about [Bazel Release Engineering](https://docs.bazel.build/versions/master/user-manual.html#bazel-releng)
