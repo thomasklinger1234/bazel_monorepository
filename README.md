@@ -1,5 +1,7 @@
 # bazel_monorepository
 
+![master](https://github.com/thomasklinger1234/bazel_monorepository/workflows/master/badge.svg)
+
 > Experiment for building a polyglot monorepo based on Bazel.
 
 ## About Monorepos
