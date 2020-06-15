@@ -8,5 +8,6 @@
 - CI with GitHub actions
 - Testing
 - Include devtools
-  - [Buildifier](https://github.com/bazelbuild/buildtools/tree/master/buildifier)
-  - [Buildozer](https://github.com/bazelbuild/buildtools/tree/master/buildozer)
+  - [x] [Buildifier](https://github.com/bazelbuild/buildtools/tree/master/buildifier)
+  - [x] [Buildozer](https://github.com/bazelbuild/buildtools/tree/master/buildozer)
+  - [x] [Shfmt](https://github.com/mvdan/sh)
