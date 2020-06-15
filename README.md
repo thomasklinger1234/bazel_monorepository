@@ -43,3 +43,11 @@ Install [Bazel](https://docs.bazel.build/versions/master/install.html) - that's 
 
 - Build everything: `bazel build //...`
 - Test everything: `bazel test //...`
+
+### Navigating
+
+You can explore all available bazel targets by executing 
+
+```
+bazel query //... --output label_kind | sort | column -t
+```
