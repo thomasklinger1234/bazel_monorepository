@@ -17,3 +17,12 @@ sh_binary(
         "@buildozer_osx//file",
     ],
 )
+
+sh_binary(
+    name = "shfmt",
+    srcs = ["bazel_tools/shfmt.sh"],
+    data = [
+        "@shfmt//file",
+        "@shfmt_osx//file",
+    ],
+)

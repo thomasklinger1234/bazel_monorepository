@@ -38,3 +38,17 @@ http_file(
     sha256 = "df51cfa71eec35533cb31e8d76efd06c68fd0ba70db54490a9817186ccb4c991",
     urls = ["https://github.com/bazelbuild/buildtools/releases/download/3.2.1/buildifier.mac"],
 )
+
+http_file(
+    name = "shfmt",
+    executable = True,
+    sha256 = "3e519c372749174a09383fdd81030630e3755d654adf93839faf334c025289e8",
+    urls = ["https://github.com/mvdan/sh/releases/download/v3.1.1/shfmt_v3.1.1_linux_amd64"],
+)
+
+http_file(
+    name = "shfmt_osx",
+    executable = True,
+    sha256 = "9c388336e9b8307eae460ef87e53613b5113237bc8c8953e2dd3b449a447b6c0",
+    urls = ["https://github.com/mvdan/sh/releases/download/v3.1.1/shfmt_v3.1.1_darwin_amd64"],
+)
