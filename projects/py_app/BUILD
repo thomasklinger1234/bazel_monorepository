@@ -28,6 +28,7 @@ py_binary(
     data = [],
     deps = [
         ":lib",
+        "//projects/py_lib:lib",
         requirement("requests"),
     ],
 )
