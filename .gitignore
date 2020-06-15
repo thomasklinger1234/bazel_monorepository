@@ -2,3 +2,7 @@
 .vscode
 
 bazel-*
+dist
+node_modules
+
+.DS_Store
