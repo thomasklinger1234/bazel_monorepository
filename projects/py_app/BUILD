@@ -1,9 +1,12 @@
 package(default_visibility = ["//visibility:__subpackages__"])
 
+load("@python_deps//:requirements.bzl", "requirement")
+
 py_library(
   name = "lib",
   srcs = [
     "lib.py",
+    "__init__.py",
   ]
 )
 
@@ -24,6 +27,7 @@ py_binary(
   ],
   deps = [
     ":lib",
+    requirement("requests"),
   ],
   data = [],
 )
