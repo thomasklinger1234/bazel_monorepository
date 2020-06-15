@@ -1,0 +1,44 @@
+###############################
+# Server                      #
+###############################
+
+startup --batch 
+startup --host_jvm_args=-XX:-UseParallelGC
+
+###############################
+# Directory structure         #
+###############################
+
+# Artifacts are typically placed in a directory called "dist"
+# Be aware that this setup will still create a bazel-out symlink in
+# your project directory, which you must exclude from version control and your
+# editor's search path.
+# build --symlink_prefix=dist/
+
+###############################
+# Output                      #
+###############################
+
+# A more useful default output mode for bazel query, which
+# prints "ng_module rule //foo:bar" instead of just "//foo:bar".
+query --output=label_kind
+query --keep_going
+
+# By default, failing tests don't print any output, it's logged to a
+# file instead.
+test --test_output=errors
+
+###############################
+# Build                       #
+###############################
+
+build --show_timestamps 
+build --jobs 600
+build --color=yes
+build:memcheck --strip=never --test_timeout=3600
+
+###############################
+# Test                        #
+###############################
+
+test --test_output=error
