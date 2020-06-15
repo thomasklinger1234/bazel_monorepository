@@ -6,10 +6,6 @@ set -o pipefail
 
 # Check for formatting issues
 
-_RED=$(tput setaf 1)
-_GREEN=$(tput setaf 2)
-_RESET=$(tput sgr0)
-
 GIT_REPO_ROOT=$(git rev-parse --show-toplevel)
 CI="${CI:-false}"
 
@@ -22,9 +18,9 @@ bazel run //tools:shfmt $(find $GIT_REPO_ROOT -name '*.sh' -type f)
 # * working tree contains unstaged changes
 # When ran locally it silently fixes everything.
 if [[ ! -z "$CI" && ! -z $(git status -s) ]]; then
-  echo "$_RED[!] Source files are not formatted properly$_RESET"
-  echo "$_RED[!] Please run ''$0'' to fix it$_RESET"
+  echo "[!] Source files are not formatted properly"
+  echo "[!] Please run ''$0'' to fix it"
   exit 1
 else
-  echo "$_GREEN[x] Source files are formatted and not running on CI"
+  echo "[x] Source files are formatted and not running on CI"
 fi
