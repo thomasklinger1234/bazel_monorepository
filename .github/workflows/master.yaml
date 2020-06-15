@@ -20,3 +20,6 @@ jobs:
         key: ${{ runner.os }}-bazel-${{ hashFiles('bazel-*/**') }}
         restore-keys: |
           ${{ runner.os }}-bazel-
+    - run: |
+        bazel test //...
+        bazel build //...
