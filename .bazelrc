@@ -41,4 +41,4 @@ build:memcheck --strip=never --test_timeout=3600
 # Test                        #
 ###############################
 
-test --test_output=error
+test --test_output=all
