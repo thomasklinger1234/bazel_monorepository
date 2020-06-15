@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: |
-        ./bootstrap.sh
+        sudo ./bootstrap.sh
     - uses: actions/cache@v2
       with:
         path: "bazel-*"
