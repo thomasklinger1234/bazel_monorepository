@@ -80,6 +80,12 @@ load(
 pip_repositories()
 
 pip3_import(
-  name = "python_deps_common",
+  name = "python_deps",
   requirements = "//third_party/python:requirements.txt",
 )
+
+load("@python_deps//:requirements.bzl",
+  "pip_install"
+)
+
+pip_install()
