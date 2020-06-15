@@ -4,6 +4,11 @@
 
 > Experiment for building a polyglot monorepo based on Bazel.
 
+Heavily inspired by 
+
+- [google/startup-os](https://github.com/google/startup-os)
+- [hasadna/monorepo](https://github.com/hasadna/monorepo)
+
 ## About Monorepos
 
 A monorepo is a software development approach where all code is stored in a single repository. Some things are easier to do in a monorepo, such as sharing a proto file across front-end and backend, some things are harder, such as per-repo control over collaborators, email notifications, commit history etc. 
