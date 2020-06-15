@@ -3,7 +3,7 @@ name: master
 
 on:
   push:
-    branches: 
+    branches:
       - "master"
 
 jobs:
@@ -20,5 +20,5 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-bazel-
     - run: |
-        # bazel test //...
+        bazel test //...
         bazel build //...
