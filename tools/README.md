@@ -13,3 +13,4 @@ We want to automate as much as possible. Here are some tools we use:
 
 - `bazel run //tools:buildifier -- -mode=fix -r $(pwd)` runs buildifier on the project to fix BUILD files
 - `bazel run //tools:shfmt $(find . -name '*.sh' | xargs realpath)` runs shfmt to format all bash scripts
+- `./$(git rev-parse --show-toplevel)/tools/fmtcheck.sh` to run all formatting checks
