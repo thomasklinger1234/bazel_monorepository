@@ -1,0 +1,25 @@
+---
+name: master
+
+on:
+  pull_request:
+    branches: 
+      - "master"
+      - "!dependabot/**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: |
+        sudo ./bootstrap.sh
+    - uses: actions/cache@v2
+      with:
+        path: "bazel-*"
+        key: ${{ runner.os }}-bazel-${{ hashFiles('bazel-*/**') }}
+        restore-keys: |
+          ${{ runner.os }}-bazel-
+    - run: |
+        # bazel test //...
+        bazel build //...
