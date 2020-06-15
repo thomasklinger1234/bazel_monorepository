@@ -14,14 +14,14 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_jar")
 http_file(
     name = "buildozer",
     executable = True,
-    sha256 = "60df58b007329462955bace7e2b30773765670e9",
+    sha256 = "1c1a63d786327b0708273290e888d09f6aa93284db78d2cc0e15f7573c7f9e68",
     urls = ["https://github.com/bazelbuild/buildtools/releases/download/3.2.1/buildozer"],
 )
 
 http_file(
     name = "buildozer_osx",
     executable = True,
-    sha256 = "cbe6e953c881a8f6f53f645500ed81d16b95673e",
+    sha256 = "17f41c92e64dc2afb7f69cd102b3d81278afdf1afcac6956e5f02ae934dafcff",
     urls = ["https://github.com/bazelbuild/buildtools/releases/download/3.2.1/buildozer.mac"],
 )
 
